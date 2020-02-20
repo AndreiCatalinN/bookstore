@@ -30,3 +30,6 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+body{
+  background: #f6e6b4;
+}
