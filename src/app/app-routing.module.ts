@@ -7,6 +7,7 @@ import {RegisterComponent} from './register/register.component';
 import {LoginComponent} from './login/login.component';
 import {AboutComponent} from './about/about.component';
 import {AccountComponent} from './account/account.component';
+import {BookaddComponent} from './bookadd/bookadd.component';
 
 const appRoutes: Routes = [
   {
@@ -24,6 +25,10 @@ const appRoutes: Routes = [
   {
     path: 'account',
     component: AccountComponent,
+  },
+  {
+    path: 'book_add',
+    component: BookaddComponent,
   },
   {
     path: '**',

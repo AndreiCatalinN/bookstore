@@ -26,29 +26,36 @@
           <a class="nav-link"
              routerLink="/"
              routerLinkActive="active">Home</a>
-        </li>
+      </li>
       <li class="nav-item">
           <a class="nav-link"
              routerLink="/about"
              routerLinkActive="active">Useful Information</a>
-        </li>
-<!--      <li class="nav-item">-->
-<!--          <a class="nav-link" id="MyBooks" href="my_books.php">My books</a>-->
-<!--        </li>-->
-<!--      <li class="nav-item">-->
-<!--          <a class="nav-link" href="insert_book.php">Add Book</a>-->
-<!--        </li>-->
+      </li>
+      <li class="nav-item">
+          <a class="nav-link"
+             id="MyBooks"
+             routerLink="/my_books"
+             routerLinkActive="active">My books</a>
+<!--        TODO: Generate my books component or check how to print just a users books -->
+      </li>
+      <li class="nav-item">
+          <a class="nav-link"
+             routerLink="/book_add"
+             routerLinkActive="active">Add Book</a>
+      </li>
       <li class="nav-item">
           <a class="nav-link"
              id="Account"
              routerLink="/account"
              routerLinkActive="active">Account</a>
-        </li>
+      </li>
     </ul>
 
     <ul class="navbar-nav navbar-right">
         <li class="nav-item">
           <a class="nav-link"  href="logout.php">Log Out</a>
+<!--          TODO: How do I log out?-->
         </li>
         <li class='nav-item'>
           <a class='nav-link'
@@ -66,6 +73,7 @@
           <form class="form-inline my-2 my-lg-0" action="results.php" method="get" enctype="multipart/form-data">
             <input type="text" name="search_book" class="form-control mr-sm-2"   placeholder="Search" aria-label="Search">
             <input type="submit" name="search"  class="btn btn-light" value="Search" href="results.php">
+<!--            TODO: Change this to work for angular-->
           </form>
         </li>
       </ul>

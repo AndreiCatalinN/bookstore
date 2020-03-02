@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AccountComponent } from './account/account.component';
+import { BookaddComponent } from './bookadd/bookadd.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AccountComponent } from './account/account.component';
     RegisterComponent,
     LoginComponent,
     PageNotFoundComponent,
-    AccountComponent
+    AccountComponent,
+    BookaddComponent
   ],
   imports: [
     BrowserModule,
