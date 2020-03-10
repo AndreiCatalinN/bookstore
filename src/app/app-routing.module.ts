@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
-import {RegisterComponent} from './register/register.component';
-import {LoginComponent} from './login/login.component';
-import {AboutComponent} from './about/about.component';
-import {AccountComponent} from './account/account.component';
+import {PageNotFoundComponent} from './others/page-not-found/page-not-found.component';
+import {RegisterComponent} from './user_space/register/register.component';
+import {LoginComponent} from './user_space/login/login.component';
+import {AboutComponent} from './others/about/about.component';
+import {AccountComponent} from './user_space/account/account.component';
 import {BookaddComponent} from './bookadd/bookadd.component';
 
 const appRoutes: Routes = [
