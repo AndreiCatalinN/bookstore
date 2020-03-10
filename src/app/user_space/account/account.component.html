@@ -1,1 +1,79 @@
-<p>account works!</p>
+<div class="content_wrap">
+  <div class="row">
+
+    <div class ="col-lg-6 m_bottom" >
+      <form action="update_details.php" method="post" enctype="multipart/form-data">
+        <table>
+          <tr>
+            <h4>Update user details</h4>
+          </tr>
+          <tr>
+            <td>
+              <button class="btn btn-secondary" name ="but" formaction="update_details.php" type="submit">Change Username</button>
+            </td>
+            <td>
+              <input class="form-control" name = "username" type ="text" placeholder ="Enter new  Username" >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="btn btn-secondary" name ="firstn" formaction="update_details.php" type="submit">Change Firstname</button>
+            </td>
+            <td>
+              <input class="form-control" name = "firstname" type ="text" placeholder ="Enter new Firstname" >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="btn btn-secondary" name ="lastn" formaction="update_details.php" type="submit">Change Lastname</button>
+            </td>
+            <td>
+              <input  class="form-control" name = "lastname" type ="text" placeholder ="Enter new Lastname">
+            </td>
+          </tr>
+          <tr>
+            <td><button class="btn btn-secondary" name ="eircome" formaction="update_details.php" type="submit">Change Eircome</button>
+            </td>
+
+            <td>
+              <input class="form-control" name="code" type="text"  placeholder="Enter new Eircom Code" >
+            </td>
+          </tr>
+          <tr>
+            <td><button class="btn btn-secondary" name ="phone" formaction="update_details.php" type="submit">Change Phone No.</button>
+            </td>
+            <td>
+              <input class="form-control" name="phone_no"  type="text" placeholder ="Enter new Phone Number" >
+            </td>
+          </tr>
+          <tr>
+            <td><button class="btn btn-secondary" name ="image" formaction="update_details.php" type="submit">Change Profile Image</button>
+
+            <td ><input type="file" name="image"  ></td>
+          </tr>
+          <tr>
+            <div>
+              <td><strong>If email changed you will be logged out !</strong></td>
+
+            </div>
+          </tr>
+
+          <tr>
+            <td>
+              <button class="btn btn-secondary" name ="mail" formaction="update_details.php" type="submit">Change E-mail</button>
+            </td>
+            <td>
+              <input class="form-control" name="email"  type="email" placeholder ="Email" >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="btn btn-secondary"name="pass" formaction="change_password.php"type="submit">Change Password</button>
+              <br>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>

@@ -14,6 +14,7 @@ import { PageNotFoundComponent } from './others/page-not-found/page-not-found.co
 import { AccountComponent } from './user_space/account/account.component';
 import { BookaddComponent } from './bookadd/bookadd.component';
 import { BookCardComponent } from './book-card/book-card.component';
+import { UserbooksComponent } from './userbooks/userbooks.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BookCardComponent } from './book-card/book-card.component';
     PageNotFoundComponent,
     AccountComponent,
     BookaddComponent,
-    BookCardComponent
+    BookCardComponent,
+    UserbooksComponent
   ],
   imports: [
     BrowserModule,
