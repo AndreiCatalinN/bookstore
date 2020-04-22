@@ -1,51 +1,47 @@
-const createError = require('http-errors');
 const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser= require('body-parser');
+const createError = require('http-errors');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-let mongoose = require('mongoose');
+
+// Connect to DB
+const dbLink = 'mongodb://127.0.0.1:27017/bookstore';
+const options = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+};
+mongoose.connect(dbLink, options);
+
+const db = mongoose.connection
+db.once('open', _ => {
+  console.log('Database connected:', dbLink)
+})
+
+db.on('error', err => {
+  console.error('connection error:', err)
+})
+
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-
+const booksRouter = require('./routes/books');
 const app = express();
-
-mongoose.connect('mongodb://127.0.0.1:27017/bookstore')
-
-app.post('/test', (req, res, next) => {
-  //create new student using schema
-  let newStudent = new Student({
-    name: req.body.name,
-    marks: req.body.marks,
-    teachers: req.body.teachers
-  })
-  //save new student to db
-  newStudent.save((err, result) => {
-    if (err) { console.log(err) }
-    else { res.json(result) }
-  })
-})
-app.get('/test', (req, res, next) => {
-  //use find() method to return all students
-  Student.find((err, result) => {
-    if(err) { console.log(err) }
-    else { res.json(result) }
-  })
-})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
+app.use('/books', booksRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

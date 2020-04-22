@@ -13,12 +13,19 @@ export class BookaddComponent implements OnInit {
 
   ngOnInit(): void {
     this.bookForm = this.fb.group({
-      isbn: ['', Validators.required],
-      title: ['', Validators.required]
+      isbn: new FormControl('', [Validators.required]),
+      title: new FormControl('', [Validators.required]),
+      author: new FormControl('', [Validators.required]),
+      description: new FormControl(''),
+      genre: new FormControl('', [Validators.required]),
+      publication_year: new FormControl(''),
+      publisher: new FormControl('', [Validators.required]),
+      book_image: new FormControl('', )
     });
   }
 
   onSubmit() {
+    // perform some checking for sql injection and other characters
     console.log(this.bookForm);
     console.log('submitted');
   }

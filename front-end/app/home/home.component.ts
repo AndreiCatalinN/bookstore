@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from 'rxjs';
+
 
 @Component({
   selector: 'app-home',
@@ -8,13 +8,13 @@ import {Observable} from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 
+  books = [
+    { title: 'art of war', description: 'desc1'},
+    { title: 'prince', description: 'desc2'}
+    ];
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
-
-
+  ngOnInit(): void {}
 
 }
