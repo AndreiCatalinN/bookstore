@@ -1,3 +1,18 @@
+# Research
+
+brypt on node.js?
+jwt?
+sessions are not mandatory.
+tokens are a way of assigning authorization
+  
+what is redis, what is a data store
+
+express-session?
+  
+what is web storage
+  
+session vs sessionless
+  
 # Bookstore
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
@@ -5,7 +20,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
+Before the first ng server, npm install needs to be performed to download the packages.
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
